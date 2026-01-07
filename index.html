@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taller Mecánico Pro</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f4f4f4; color: #333; }
+    header { background: #111; color: #fff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 span { color: #ff4d00; }
+    nav a { color: #fff; margin-left: 20px; text-decoration: none; font-weight: bold; }
+    .btn { background: #ff4d00; color: #fff; padding: 12px 20px; border-radius: 5px; text-decoration: none; }
+    .hero { display: flex; flex-wrap: wrap; align-items: center; padding: 60px 40px; background: linear-gradient(to right, #111 55%, #222); color: #fff; }
+    .hero-text { flex: 1; min-width: 300px; }
+    .hero-text h2 { font-size: 42px; margin-bottom: 20px; }
+    .hero-text h2 span { color: #ff4d00; }
+    .hero-text p { margin-bottom: 30px; font-size: 18px; }
+    .hero-img { flex: 1; text-align: center; }
+    .hero-img img { max-width: 100%; border-radius: 10px; }
+    .features { background: #fff; padding: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .feature { background: #f9f9f9; padding: 25px; border-radius: 10px; text-align: center; }
+    .feature h3 { color: #ff4d00; margin-bottom: 10px; }
+    .services { padding: 60px 40px; }
+    .services h2 { text-align: center; margin-bottom: 40px; font-size: 32px; }
+    .service-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .service { background: #fff; padding: 25px; border-radius: 10px; }
+    footer { background: #111; color: #fff; text-align: center; padding: 30px; margin-top: 40px; }
+    footer a { color: #ff4d00; text-decoration: none; }
+  </style>
+  <style>
+    .social-bubble {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 999;
+    }
+    .social-main {
+      width: 60px;
+      height: 60px;
+      background: #ff4d00;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .social-links {
+      display: none;
+      flex-direction: column;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    .social-links a {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .whatsapp { background: #25D366; }
+    .instagram { background: #E1306C; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Auto<span>Care</span></h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+    <a class="btn" href="https://wa.me/56900000000">Agenda tu cita</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Cuidado de tu auto <span>profesional y accesible</span></h2>
+    <p>Mecánica general, diagnósticos y reparaciones con garantía. Tu auto en manos expertas.</p>
+    <a class="btn" href="#contacto">Cotiza ahora</a>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1601924579535-66c07c78e41f" alt="Taller mecánico" />
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <h3>Diagnóstico preciso</h3>
+    <p>Equipos modernos para detectar fallas rápidamente.</p>
+  </div>
+  <div class="feature">
+    <h3>Garantía</h3>
+    <p>Todos nuestros trabajos están garantizados.</p>
+  </div>
+  <div class="feature">
+    <h3>Atención rápida</h3>
+    <p>Respetamos tu tiempo y el de tu vehículo.</p>
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <h2>Nuestros Servicios</h2>
+  <div class="service-list">
+    <div class="service">Mecánica general</div>
+    <div class="service">Frenos y suspensión</div>
+    <div class="service">Alineación y balanceo</div>
+    <div class="service">Cambio de aceite</div>
+    <div class="service">Electricidad automotriz</div>
+    <div class="service">Escáner y diagnóstico</div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <p>📍 Dirección: Tu dirección aquí | 📞 Tel: +56 9 0000 0000</p>
+  <p>© 2026 Taller Mecánico AutoCare</p>
+  <p><a href="https://wa.me/56900000000">WhatsApp</a></p>
+</footer>
+
+<div class="social-bubble">
+  <div class="social-links" id="socialLinks">
+    <a href="https://wa.me/56900000000" target="_blank" class="whatsapp">🟢</a>
+    <a href="https://instagram.com/tuinstagram" target="_blank" class="instagram">📸</a>
+  </div>
+  <div class="social-main" onclick="toggleSocials()">💬</div>
+</div>
+
+<script>
+  function toggleSocials() {
+    const links = document.getElementById('socialLinks');
+    links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+
+</body>
+</html>
